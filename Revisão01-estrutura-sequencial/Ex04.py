@@ -7,5 +7,5 @@ for nota in range(0,4):
     notas[nota] = float(input(f'Insira a sua nota no {nota+1} bimestre:'));
     media = notas[nota] + media;
 
-print(media/4)
+print(media/4);
 
