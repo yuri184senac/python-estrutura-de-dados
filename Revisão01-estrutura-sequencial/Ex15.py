@@ -32,5 +32,3 @@ print(f'Imposto de renda R${ir:0.2f}');
 print(f'INSS R${inss:0.2f}');
 print(f'Sindicato R${sindicato:0.2f}');
 print(f'Salário líquido R${sal_liquido:0.2f}');
-
-
