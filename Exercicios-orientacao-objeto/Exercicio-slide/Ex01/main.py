@@ -1,6 +1,6 @@
 from ponto import Ponto
 
-arquivo = open('pontos.txt');
+arquivo = open('Exercicios-orientacao-objeto\Exercicio-slide\Ex01\pontos.txt');
 def criarObjetoPonto():
     pontos = [];
     for line in arquivo:
