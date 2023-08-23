@@ -1,10 +1,11 @@
 class Automovel:
-    placa = None;
-    def __init__(self):
-        self = None;
     
-    def set_placa(self):
-        self.placa = '123';
+    def __init__(self, placa):
+        self.set_placa(placa);
+    
+    def set_placa(self, placa):
+        self.placa = placa;
+        
     
     def get_placa(self):
         return self.placa;
@@ -17,5 +18,9 @@ class Automovel:
 
 
     
-    
+fusca = Automovel('1213')
+
+print(fusca.__str__())
+
+
         
