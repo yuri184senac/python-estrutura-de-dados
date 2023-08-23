@@ -23,6 +23,7 @@ retangulo = Retangulo(5,10);
 
 print(retangulo.calcularArea());
 print(retangulo.calcularPerimetro());
+print(retangulo.retornarLados())
 
 
         

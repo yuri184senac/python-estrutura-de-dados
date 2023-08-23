@@ -1,3 +1,4 @@
+# Classe Quadrado: Crie uma classe que modele um quadrado:
 class Quadrado:
     
     def __init__(self, lado):
