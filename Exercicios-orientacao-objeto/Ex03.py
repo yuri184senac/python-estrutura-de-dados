@@ -18,12 +18,21 @@ class Retangulo:
 
     def calcularPerimetro(self):
         return 2*(self.base) + 2*(self.altura);
-      
-retangulo = Retangulo(5,10);
 
-print(retangulo.calcularArea());
-print(retangulo.calcularPerimetro());
-print(retangulo.retornarLados())
+      
+base = float(input('Largura: '));
+altura = float(input('Altura: '));
+
+AreaLocal = Retangulo(base,altura);
+AreaPiso = Retangulo(4,4);
+
+#Calcular pisos necessários:
+qtde_pisos = AreaLocal.calcularArea()/AreaPiso.calcularArea();
+
+print(qtde_pisos)
+
+
+
 
 
         

@@ -38,21 +38,9 @@ class Pessoa:
     def getNome(self):
        return self.nome;
 
-humano = Pessoa('Fulano',20,80,1.75);
-print('PRESENTE')
-print(humano.getNome());
-print(humano.getIdade());
-print(humano.getPeso());
-print(humano.getAltura());
+humano = Pessoa('Yuri',20,80,1.50);
 
-humano.engordar(1);
-humano.envelhecer(5);
-humano.emagrecer(10);
-humano.crescer(0.2);
-humano.setNome('Yuri');
+if humano.getIdade() < 21:
+   humano.crescer(0.05);
 
-print('FUTURO')
-print(humano.getNome());
-print(humano.getIdade());
-print(humano.getPeso());
-print(humano.getAltura());
+print(humano.getAltura())

@@ -7,7 +7,7 @@ class Televisao:
     def __init__(self, volume=0, canal=0):
         self._volume = volume;
         self._canal = canal;
-
+    #VOLUME
     @property
     def volume(self):
         return self._volume;
@@ -17,7 +17,7 @@ class Televisao:
         if not((value > 0 ) and (value < 100)) :
             raise 'Volume fora da faixa do limite'
         self._volume = value;
-
+    #CANAL
     @property
     def canal(self):
         return self._canal;
@@ -28,6 +28,8 @@ class Televisao:
             raise 'Não existem canais abaixo do número 0'
         print('Você mudou o canal para', value);
         self._canal = value;
+
+
 
 
 lg = Televisao()
