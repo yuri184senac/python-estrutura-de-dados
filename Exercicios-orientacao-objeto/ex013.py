@@ -22,6 +22,5 @@ class Funcionario:
     
 p1 = Funcionario('Yuri', 1000)
 p1.__salario = 200 #Professor, repare que não conseguimos alterar o valor do salário diretamente
-print(p1.salario)
-
-
+print('Nome:', p1.nome)
+print('Salario:', p1.salario)
