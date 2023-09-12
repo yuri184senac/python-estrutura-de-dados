@@ -1,3 +1,5 @@
+# Yuri Conder Roliz Sabbagh
+
 class Funcionario:
     def __init__(self, nome, salario):
         self._nome = nome

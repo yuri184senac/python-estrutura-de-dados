@@ -1,3 +1,5 @@
+# Yuri Conder Roliz Sabbagh
+
 class BombaCombustivel:
 
     def __init__(self, tipoCombustivel, valorLitro, qtde_combustivel):

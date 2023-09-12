@@ -1,3 +1,5 @@
+# Yuri Conder Roliz Sabbagh
+
 # Classe Quadrado: Crie uma classe que modele um quadrado:
 class Quadrado:
     

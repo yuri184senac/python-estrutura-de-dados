@@ -1,4 +1,5 @@
 #Yuri Conder Roliz Sabbagh
+
 class Tamagushi:
     def __init__(self, nome, fome, saude, idade):
         self.nome = nome;
