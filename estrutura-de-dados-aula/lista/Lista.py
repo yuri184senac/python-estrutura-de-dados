@@ -20,4 +20,4 @@ def insere_no_inicio(lista, novo_dado):
     novo_nodo.proximo = lista.cabeca
     lista.cabeca = novo_nodo
 
-insere_no_inicio()
+insere_no_inicio()d
