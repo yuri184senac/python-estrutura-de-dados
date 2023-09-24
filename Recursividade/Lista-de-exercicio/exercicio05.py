@@ -5,5 +5,5 @@ def calculaSoma(n):
         return n
     return calculaSoma(n - 1) + n
 
-print(calculaSoma(5))
+print(calculaSoma(10))
 
