@@ -14,3 +14,4 @@ print('Removendo um elemento: ', pilha)
 pilha.pop()
 print("Removendo outro elemento:", pilha)
 
+# o nó seria um prato, 
