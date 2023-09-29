@@ -7,6 +7,8 @@ n = int(input('Insira valor de n: '));
 def potencia(k,n):
     if (n==1):
         return k
+    elif (n==0):
+        return 1
     return potencia(k,n-1)*k
 
 print(potencia(k,n))
