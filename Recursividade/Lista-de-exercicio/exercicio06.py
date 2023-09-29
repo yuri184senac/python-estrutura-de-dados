@@ -1,7 +1,7 @@
 #Crie um programa em python, que contenha uma função recursiva que receba dois inteiros positivos k e n e calcule k^n . Utilize apenas multiplicações. O programa principal deve solicitar ao usuário os valores de k e n e imprimir o resultado da chamada da função. 
 
-# k = int(input('Insira valor de k: '));
-# n = int(input('Insira valor de n: '));
+k = int(input('Insira valor de k: '));
+n = int(input('Insira valor de n: '));
 
 
 def potencia(k,n):
@@ -9,6 +9,6 @@ def potencia(k,n):
         return k
     return potencia(k,n-1)*k
 
-print(potencia(2,2))
+print(potencia(k,n))
 
 
