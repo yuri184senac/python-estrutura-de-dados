@@ -3,14 +3,20 @@ import random
 
 vetorA = []
 x = 0;
-while x <= 100:
+while x <= 10:
   numero_aleatorio = random.randint(0,100)
   vetorA.append(numero_aleatorio)
   x+=1;
 
-def inverterOrdem(vetor: list):
-  if vetor.index == 0:
-    return 1
-  return inverterOrdem(vetor[:])
+def inverterOrdem(vetor: list, start, end):
+  if end <= start:
+    return vetor
+  aux = vetor[start]
+  vetor[start] = vetor[end]
+  vetor[end] = aux
+    
+  return inverterOrdem(vetor, start+1, end-1)
 
+print(vetorA)
+print(inverterOrdem(vetorA,0, 10))
 
