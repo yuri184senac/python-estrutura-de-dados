@@ -17,6 +17,6 @@ def inverterOrdem(vetor: list, start, end):
     
   return inverterOrdem(vetor, start+1, end-1)
 
-print(vetorA)
-print(inverterOrdem(vetorA,0, 10))
+print('Vetor original:', vetorA)
+print('Vetor original invertido:', inverterOrdem(vetorA,0, 10))
 
