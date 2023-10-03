@@ -25,6 +25,10 @@ class Pilha:
         self.topo = novo_nodo
         pass
     
+    def remove(self):
+        assert self.topo, "Impossível remover o valor da pilha"
+        self.topo = self.topo.anterior
+    
     def __repr__(self):
         return "[" + str(self.topo) + "]"
     
@@ -32,8 +36,27 @@ class Pilha:
 #INICIO
 
 
-stack = Pilha() #A pilha começa vazia, o topo=None. Ninguém está no topo quando a pilha é inicializada
-stack.insere(5) #O que é inserido na pilha é o nodo. O nodo armazena um valor e um endereço de memória
-stack.insere(6)
-stack.insere(7)
-print(stack)
+pilha = Pilha()
+print("Pilha vazia: ", pilha)
+
+#Inserete elementos na pilha
+for i in range(5):
+    pilha.insere(i)
+    print("Insere o valor {0} no topo da pilha: {1}".format(i, pilha))
+    
+#Remove elementos na pilha;
+while pilha.topo != None:
+    pilha.remove()
+    print("Removendo o elemento que está no topo da pilha: ", pilha)
+
+# stack = Pilha() #A pilha começa vazia, o topo=None. Ninguém está no topo quando a pilha é inicializada
+# stack.insere(5) #O que é inserido na pilha é o nodo. O nodo armazena um valor e um endereço de memória
+# stack.insere(6)
+# stack.insere(7)
+# print(stack)
+# stack.remove()
+# stack.remove()
+# stack.remove()
+# print(stack)
+
+
