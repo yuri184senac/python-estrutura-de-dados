@@ -2,11 +2,21 @@
 #Em seguida, calcule a média anual das temperatura e mostre a média calculada juntamente com todas as temp 
 #acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
 
-def ordernar(lista, mediaAnual):
-    for i in lista:
-        if i > mediaAnual:
-            
+lista2 = [3,2,1]
+def ordernar(lista, mediaAnual=0):
+    lenght = len(lista)
+    i = 1
+    while i < lenght:
+        x = lista[i]
+        j = i - 1
+        while (j>=0 and lista[j] > x):
+            lista[j+1] = lista[j]
+            j = j-1
+        lista[j+1] = x
+        i = i+1
 
+    return lista     
+print(ordernar(lista2))
 
 meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro",]
 temp= []
