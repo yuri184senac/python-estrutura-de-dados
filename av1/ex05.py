@@ -9,13 +9,13 @@
 # da playlist, possibilitando a exibição em Loop."""
 
 class Nodo:
-    def _init_(self, dado):
+    def __init__(self, dado):
         self.dado = dado
         self.proximo = None
 
 
 class Playlist:
-    def _init_(self):
+    def __init__(self):
         self.cabeca = None
 
 
@@ -42,6 +42,7 @@ class Playlist:
                 return corrente
             corrente = corrente.proximo
             if corrente == self.cabeca:
+                print('Vídeo não encontrado')
                 return None
 
 
@@ -76,7 +77,7 @@ class Playlist:
             return "Lista Vazia"
         corrente = self.cabeca
         while True:
-            print(corrente.dado, end="->")
+            print(corrente.dado, end="-> ")
             corrente = corrente.proximo
             if corrente == self.cabeca:
                 break
@@ -85,5 +86,13 @@ class Playlist:
 
 if __name__ == "__main__":
     promohub = Playlist()
-
+    promohub.inserir('monetização-de-videos.mp4')
+    promohub.inserir('como-fazer-promocao.mp4')
+    promohub.inserir('deletando-videos.mp4')
+    promohub.buscar('como-fazer-promocao.mp4')
     promohub.exibir()
+    promohub.remover('como-fazer-promocao.mp4')
+    print("")
+    promohub.exibir()
+    print("")
+    promohub.buscar('como-fazer-promocao.mp4')
