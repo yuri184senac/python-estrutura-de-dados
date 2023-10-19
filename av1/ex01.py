@@ -3,19 +3,22 @@
 #acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
 
 lista2 = [3,2,1]
-def ordernar(lista, mediaAnual=0):
+def ordernar(lista, lista2, mediaAnual):
     lenght = len(lista)
     i = 1
     while i < lenght:
         x = lista[i]
+        z = lista2[i]
         j = i - 1
-        while (j>=0 and lista[j] > x):
-            lista[j+1] = lista[j]
-            j = j-1
-        lista[j+1] = x
-        i = i+1
+        if x > mediaAnual:
+            while (j>=0 and lista[j] > x):
+                lista[j+1] = lista[j]
+                j = j-1
+            lista[j+1] = x
+            i = i+1
 
-    return lista     
+    return lista, lista2    
+     
 print(ordernar(lista2))
 
 meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro",]
