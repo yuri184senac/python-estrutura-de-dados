@@ -1,3 +1,5 @@
+#Grupo: JOSÉ PAULO SAPPI, LUIS FERNANDO IUNES ABRAHÃO, YURI CONDER ROLIZ SABBAGH
+
 #Contexto:
 # Um servico de streaming de videos quer implementar a funcionalidade de Loop em suas playlists, para que
 # quando o ultimo item da playlist termine, ela reinicie a exibicao a partir do primeiro item da mesma.

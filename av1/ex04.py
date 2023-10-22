@@ -1,3 +1,5 @@
+#Grupo: JOSÉ PAULO SAPPI, LUIS FERNANDO IUNES ABRAHÃO, YURI CONDER ROLIZ SABBAGH
+
 #4) Implemente uma lista circular com estrutura encadeada com os seguintes métodos: inserção, remoção e busca.
 class Nodo:
     def __init__(self, dado):

@@ -45,4 +45,5 @@ insereInicio(lista, 10)
 insereDepois(lista, lista.cabeca, 10)
 insereDepois(lista, lista.cabeca, 20)
 print(lista.cabeca)
+#Não está funcionando
 removerDuplicatas(lista)

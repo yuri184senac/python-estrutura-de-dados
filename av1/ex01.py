@@ -1,3 +1,4 @@
+#Grupo: JOSÉ PAULO SAPPI, LUIS FERNANDO IUNES ABRAHÃO, YURI CONDER ROLIZ SABBAGH
 #  Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. 
 #Em seguida, calcule a média anual das temperatura e mostre a média calculada juntamente com todas as temp 
 #acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
