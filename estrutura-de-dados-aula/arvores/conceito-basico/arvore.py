@@ -16,9 +16,8 @@ class NodoArvore:
 raiz = NodoArvore(3)
 raiz.esquerda = NodoArvore(5)
 raiz.direita = NodoArvore(1)
-raiz.direita.direita = NodoArvore(7)
-raiz.direita.direita.direita = NodoArvore(13)
-print(raiz.direita.direita)
+
+
 
 
 def em_ordem(raiz):
@@ -29,4 +28,7 @@ def em_ordem(raiz):
     
     print(raiz.chave)
     
-    em_ordem(raiz.direta)
+    em_ordem(raiz.direita)
+    
+    
+em_ordem(raiz)
