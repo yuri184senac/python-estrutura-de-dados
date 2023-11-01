@@ -19,3 +19,14 @@ raiz.direita = NodoArvore(1)
 raiz.direita.direita = NodoArvore(7)
 raiz.direita.direita.direita = NodoArvore(13)
 print(raiz.direita.direita)
+
+
+def em_ordem(raiz):
+    if not raiz:
+        return
+    
+    em_ordem(raiz.esquerda)
+    
+    print(raiz.chave)
+    
+    em_ordem(raiz.direta)
