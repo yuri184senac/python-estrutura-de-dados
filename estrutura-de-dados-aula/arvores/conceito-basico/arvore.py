@@ -23,11 +23,8 @@ raiz.direita = NodoArvore(1)
 def em_ordem(raiz):
     if not raiz:
         return
-    
     em_ordem(raiz.esquerda)
-    
-    print(raiz.chave)
-    
+    print(raiz.chave) 
     em_ordem(raiz.direita)
     
     
