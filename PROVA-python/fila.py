@@ -61,6 +61,6 @@ class FilaService:
         pass
       else:
         print('Não achamos o elemento procurado')  
-    for i in range(count):
+    for i in range(count-1):
       fila.inserir(fila_fantasma.remove())
     return recover
