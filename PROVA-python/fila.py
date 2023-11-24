@@ -47,10 +47,10 @@ class FilaService:
       while element != None: #Contando o numero de elementos na fila utilizando essa condição
         element = fila.remove()
         if element == target and recover!=target: #Remove o elemento alvo da fila e verifica se esse elemento já foi removido antes
-          recover = element;
+          recover = element; # Salva o elemento alvo 
         else:
-          fila_fantasma.inserir(element)
-          count +=1
+          fila_fantasma.inserir(element) #Fazendo a inserção dos elementos da fila na fila fantasma
+          count +=1 #Contabilizando quantos elementos existem dentro da fila original.
     except: #Tratamento de erro para quando o alvo procurado dentro da fila não existir
       if (target == recover):
         pass
