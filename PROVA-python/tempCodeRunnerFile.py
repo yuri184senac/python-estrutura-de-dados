@@ -1,1 +1,1 @@
-fila = Fila();
+from fila import Fila, FilaService

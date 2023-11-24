@@ -38,29 +38,36 @@ class Fila:
 
 #LOGICA PARA RECUPERAR O ELEMENTO DA FILA
 class FilaService:
-  def recoverElemento( fila: Fila, target):
+  def recoverElemento(fila: Fila, target):
     recover = None;
-    element = None;
     count = 0; #Esse count foi criado para auxiliar no backup da fila original
-    
-    try:
-      travaRemocao = False; #Criamos essa flag para não remover todos os target da fila.
-      fila_fantasma = Fila(); #Criamos um espelho da fila original
-      while ((target != element)): #Condição para continuar buscando o alvo dentro fila 
-        element = fila.remove()  # Armazenando o elemento removido da fila em uma variavel
-        if ((target == element) and (not travaRemocao)): # Comparando se o elemento removido é igual ao que procuramos na fila
-          recover = element; # Se for igual, vamos salvar esse elemento na variavável chamada recover
-          element = None; # Aqui matamos a varíavel element
-          travaRemocao = True;
+    fila_fantasma = Fila();
+    try: 
+      element= ''
+      while element != None: #Contando o numero de elementos na fila utilizando essa condição
+        element = fila.remove()
+        if element == target and recover!=target: #Remove o elemento alvo da fila e verifica se esse elemento já foi removido antes
+          recover = element;
         else:
-         #Copiando elementos da fila original para a fila espelhada
           fila_fantasma.inserir(element)
-        count +=1
+          count +=1
     except: #Tratamento de erro para quando o alvo procurado dentro da fila não existir
       if (target == recover):
         pass
       else:
         print('Não achamos o elemento procurado')  
-    for i in range(count-1):
-      fila.inserir(fila_fantasma.remove())
+  
+    print('ANTES - FILA FANTASMA',fila_fantasma)
+    #Nessa parte do código faço a inserção da fila fantasma na fila original
+    i = 0;
+    while i <= count-1:
+       x = fila_fantasma.remove()
+       fila.inserir(x)
+       i+=1
+    print('ELEMENTO RECUPERADO',recover)
+    print('DEPOIS - FILA FANTASMA',fila_fantasma)
     return recover
+
+
+
+
