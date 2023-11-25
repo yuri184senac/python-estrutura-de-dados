@@ -57,16 +57,20 @@ def identicos(a: NodoArvore, b: NodoArvore):
     return False
 
 def altura(raiz):
-    count = 0
+    countEsquerda, countDireita, count = 0,0,0
     if raiz == None:
         return 0
     elif(raiz.esquerda != None or raiz.direita != None):
-        count += 1
-        count += altura(raiz.esquerda)
-        count += altura(raiz.direita)
+        countEsquerda += 1
+        countEsquerda += altura(raiz.esquerda)
+        countDireita += altura(raiz.direita)
+        count = max(countDireita, countEsquerda)
     return count
 
-
+def altura2(raiz):
+    if raiz is None:
+        return 0
+    return max(altura(raiz.esquerda), altura(raiz.direita)) + 1
 
 
 # Cria a arvore 1
@@ -76,8 +80,6 @@ raiz.direita = NodoArvore(60)
 raiz.direita.esquerda = NodoArvore(50)
 raiz.direita.direita = NodoArvore(70)
 raiz.esquerda.esquerda = NodoArvore(10)
-raiz.esquerda.direita = NodoArvore(30)
-
 print(altura(raiz))
 
 # Cria a arvore 2 (identica)
