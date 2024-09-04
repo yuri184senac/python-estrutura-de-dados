@@ -4,7 +4,7 @@
 from fractions import Fraction
 def calcular(n):
     if n == 1:
-        return 1
+        return 1ffsfsf
     return Fraction(1, n) + calcular(n-1)
 
 print(calcular(3))
